@@ -7,6 +7,11 @@ ul {
     background-size: 1.3rem 1.3rem;
 }
 
+.btnBlock {
+    margin-top: 5rem;
+    text-align: center;
+}
+
 .btn {
     background-color:rgba(4, 41, 27, 1); /* Green */
     border: none;

@@ -9,13 +9,11 @@ function CountStages(props) {
     let newCountElementTwo = React.createRef();
 
     let onWidthPagesChange = () => {
-        debugger
         let count = newCountElementOne.current.value;
         props.updateWidthStages(count);
     }
 
     let onHeightPagesChange = () => {
-        debugger
         let count = newCountElementTwo.current.value;
         props.updateHeightStages(count);
     }

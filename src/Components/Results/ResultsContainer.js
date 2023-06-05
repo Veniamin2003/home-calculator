@@ -12,7 +12,6 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
     return {
         countAllSum: () => {
-            debugger
             let action = countAllSumAC();
             dispatch(action);
         }

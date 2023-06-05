@@ -1,0 +1,90 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    width: 50vw;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    transform: scale(0.3);
+    transition: 0.4s all;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__content.active {
+    transform: scale(1);
+}
+.photo__modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.photo__modal img {
+    width: 50%;
+    height: auto;
+}
+.header__modal {
+    padding-top: 1rem;
+    font-size: 24px;
+}
+.text__modal {
+    text-align: center;
+    width: 80%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.modal__phone {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.buttons__modal {
+    display: flex;
+}
+
+.btn__modal {
+    padding: 0 1rem 2rem 1rem;
+}
+.btn__modal__text{
+    display: flex;
+    align-items: center;
+
+}
+
+.btn__modal p {
+    padding-left: 5px;
+}
+
+.icon__modal__wts {
+    color: rgba(81, 241, 38, 0.9);
+    font-size: 1.2rem;
+}
+
+.icon__modal__tlg {
+    color: rgba(38, 194, 241, 0.9);
+    font-size: 1.2rem;
+}

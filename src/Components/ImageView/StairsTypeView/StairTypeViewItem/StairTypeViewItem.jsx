@@ -12,4 +12,4 @@ const StairTypeViewItem = (props) => {
     )
 }
 
-export default StairTypeViewItem
+export default StairTypeViewItem;

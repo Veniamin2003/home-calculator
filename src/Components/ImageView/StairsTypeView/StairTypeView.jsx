@@ -6,9 +6,7 @@ import StairTypeViewItem from "./StairTypeViewItem/StairTypeViewItem";
 import MaterialsViewItem from "../MaterialView/MaterialsViewItem";
 
 function StairTypeView(props) {
-
     let state = props.typesPage
-    debugger
     return (
         <div className={s.allBlock}>
             <div>
@@ -58,4 +56,4 @@ function StairTypeView(props) {
     )
 }
 
-export default StairTypeView
+export default StairTypeView;

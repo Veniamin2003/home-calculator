@@ -1,0 +1,189 @@
+footer {
+    padding-top: 7rem;
+    background: rgb(244, 253, 255);
+    text-align: center;
+    font-size: 0.9rem;
+    /*margin-top: 7rem;*/
+}
+
+.footer__container {
+    padding: 3rem 0;
+    background: rgba(38, 32, 19, 0.9);
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    height: 23rem;
+}
+
+
+.footer__content{
+    margin-top: 5rem;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center
+}
+
+.footer__header__text {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    color: white;
+}
+
+.footer__header__text h2 {
+    font-size: 40px;
+}
+
+.footer__header__text p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+.icon__bible {
+    color: #494322;
+    transition: var(--transition);
+    font-size: 6rem;
+}
+
+.icon__bible:hover {
+    color: #6b5f4f;
+}
+
+.phone__icon {
+    color: #8c7f42;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.logo__bible {
+    width: 200px;
+    color: white;
+}
+
+.icon__block {
+    margin-top: 15px;
+}
+.icon__elements {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.icon__fridge__block img {
+    height: 100px;
+}
+.footIcon {
+    font-size: 20px;
+    margin-right: 20px;
+    color: #f0f9ff;
+}
+
+/*.youTube_icon {
+    color: #c4302b;
+}
+.telegram_icon {
+    color: #0088cc;
+}
+
+.instagram_icon {
+    color: #833ab4;
+}
+.vk_icon {
+    color: #9cb6ff;
+}*/
+
+.icon__fridge__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.icon__fridge {
+    color: #ffffff;
+    transition: var(--transition);
+    font-size: 6rem;
+}
+
+.icon__fridge:hover {
+    color: #ff9656;
+}
+/*
+footer a {
+    color: white;
+}
+footer a:hover {
+    color: var(--color-primary);
+}
+
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.footer__logo a {
+
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.permalinks a {
+    color: white;
+}
+.permalinks a:hover {
+    color: var(--color-primary);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer__social a {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.footer__social a:hover {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.footer__copyright {
+    margin-bottom: 4rem;
+    color: var(--color-bg);
+}
+
+!*==================== MEDIA QUERIES (SMALL DEVICES) =======================*!
+@media screen and (max-width: 700px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer__social {
+        margin-bottom: 2.6rem;
+    }
+
+
+}
+
+*/

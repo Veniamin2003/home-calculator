@@ -1,42 +1,52 @@
 .nav {
     grid-area: nav;
-    padding-left: 10%;
-    padding-top: 10%;
+    display: flex;
+    background: rgb(244, 253, 255);
+    box-shadow: 0px 5px 15px #182321;
+    z-index: 5;
+
+    /*padding-left: 10%;
+    padding-top: 10%;*/
 }
 
 .item1 {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 
-    width: 270px;
-    height: 50px;
+    width: 200px;
+    height: 100%;
 
-    border:1px solid rgba(34, 36, 66, 0.8);
+    border:1px solid rgba(187, 126, 87, 0.45);
+    font-weight: bold;
+    /*margin: 15px;
+    padding: 5px;*/
 
-    margin-bottom: 15px;
-    margin-top: 15px;
-
-    border-radius: 10px;
-    background: rgba(4, 41, 27, 1);
+    /*border-radius: 10px;*/
+    background: transparent;
 
 }
 .item1 a {
     font-size: 16px;
     font-weight: bold;
-    color: rgba(219, 255, 235, 0.8);
+    color: rgba(24, 23, 23, 0.8);
     text-decoration: none;
     padding-left: 10px;
 }
 
-.item a{
+.item a.active{
+    color: rgb(10, 10, 10);
+    border-bottom: #282c34;
  }
 
 .item1 a.active {
-    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    color: rgb(159, 85, 49);
+
 }
 .item1:hover {
     transition: 0.2s;
-    background-color: rgba(15,76,117, 0.8);
+    background-color: rgba(206, 185, 157, 0.8);
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
 }

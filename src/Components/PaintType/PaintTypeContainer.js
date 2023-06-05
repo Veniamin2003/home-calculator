@@ -1,12 +1,11 @@
 import React from "react";
 import {updateMaterialAC} from "../../redux/types-reducer";
 import {connect} from "react-redux";
-import {updatePaintTypeAC} from "../../redux/types-reducer";
+import {updateRoofTypeAC} from "../../redux/types-reducer";
 import PaintType from "./PaintType";
 
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         typesPage: state.typesPage
     }
@@ -14,9 +13,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updatePaintTypeId: (price, selectedId) => {
-            debugger
-            let action = updatePaintTypeAC(price, selectedId);
+        updatePaintTypeId: (price, selectedId, name) => {
+            let action = updateRoofTypeAC(price, selectedId, name);
             dispatch(action);
         }
     }

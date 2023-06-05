@@ -1,0 +1,21 @@
+.paramMainItem {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+
+    /*background: #e3d3b2;*/
+}
+
+.paramMainElement {
+    /*background: white;*/
+    width: 80%;
+    height: 80%;
+}
+
+.paramMainElement img {
+    width: 100%;
+    height: 100%;
+}

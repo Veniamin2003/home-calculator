@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import StairsTypes from "./StairsTypes";
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         typesPage: state.typesPage
     }
@@ -12,9 +11,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateType: (price, selectedId) => {
-            debugger
-            let action = updateTypeAC(price, selectedId);
+        updateType: (price, selectedId, name) => {
+            let action = updateTypeAC(price, selectedId, name);
             dispatch(action);
         }
     }

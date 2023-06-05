@@ -33,7 +33,7 @@
     transition: 0.4s;
     height: 11em;
     width: 11em;
-    border: 2px solid rgba(34, 36, 66, 0.8);
+    border: 2px solid #45322E;
 
     border-radius: 100%;
 
@@ -48,7 +48,7 @@
     width: 11em;
     border: 2px solid rgba(234,234,234, 0.8);
     border-radius: 100%;
-    background: rgba(28,36,53, 1);
+    background: #45322E;
 }
 
 .desc p {

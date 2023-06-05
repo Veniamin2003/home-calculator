@@ -1,0 +1,37 @@
+.allBlock {
+    grid-area: view;
+    /*background: rgb(220, 174, 220);*/
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+}
+
+.mainBlock {
+    display: grid;
+    justify-items: center;
+
+    width: 100%;
+    height: 70%;
+
+    background: rgba(241, 225, 208, 0.35);
+    border: 1px solid rgba(101, 97, 93, 0.42);
+}
+
+.childBlock {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    min-height: 250px;
+}
+
+.childElem {
+    display: grid;
+    justify-items: center;
+
+    width: 25%;
+    height: 100%;
+
+    background: rgba(241, 225, 208, 0.35);
+    border-left: 1px solid rgba(101, 97, 93, 0.42);
+    border-bottom: 1px solid rgba(101, 97, 93, 0.42);
+}

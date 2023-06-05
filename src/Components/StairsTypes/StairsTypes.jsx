@@ -1,13 +1,14 @@
 import React from 'react'
 import s from './../ContainerCSSModule/Container.module.css'
 import StairsTypesItem from "./Types/StairsTypesItem";
+import ParamsViewContainer from "../ParamsView/ParamsViewContainer";
+import Navbar from "../Navbar/Navbar";
 
 function StairsTypes(props) {
-debugger
     let state = props.typesPage
 
-    let onTypeChange = (price, selectedId) => {
-        props.updateType(price, selectedId);
+    let onTypeChange = (price, selectedId, name) => {
+        props.updateType(price, selectedId, name);
     }
 
     return (

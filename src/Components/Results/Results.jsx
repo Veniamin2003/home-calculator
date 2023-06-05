@@ -5,7 +5,6 @@ import ResultsView from "./ResultsView";
 
 
 function Results(props) {
-    debugger
     let state = props.typesPage
 
     let a = 1
@@ -16,8 +15,8 @@ function Results(props) {
     }
     return (
         <div className={s.typesLayer}>
-            <div >
-                <button className={s.btn} onClick={countAllSum}>Посчитать</button>
+            <div className={s.btnBlock}>
+                <button className="btn btn-primary-two" onClick={countAllSum}>Рассчитать стоимость монтажа</button>
             </div>
 
                 <ResultsView state={props.typesPage}/>

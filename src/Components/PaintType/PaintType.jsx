@@ -5,19 +5,17 @@ import PaintTypeItem from "./PaintTypeItem";
 
 
 function PaintType(props) {
-    debugger
     let state = props.typesPage
 
-    let updatePaintType = (price, selectedId) => {
-        debugger
-        props.updatePaintTypeId(price, selectedId);
+    let updatePaintType = (price, selectedId, name) => {
+        props.updatePaintTypeId(price, selectedId, name);
     }
     return (
         <div>
             <div className={s.typesLayer}>
-                {state.paintType.paintTypeItems.map(el => <PaintTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
-                                                          price={el.price} paintTypeSum={state.paintTypeSum}
-                                                          selectedId={state.selectedPaintTypeId} updatePaintType={updatePaintType}/>)}
+                {state.roofType.roofTypeItems.map(el => <PaintTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
+                                                          price={el.price} paintTypeSum={state.roofTypeSum}
+                                                          selectedId={state.selectedRoofTypeId} updatePaintType={updatePaintType}/>)}
             </div>
 
         </div>

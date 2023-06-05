@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import Heating from "./Heating";
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         typesPage: state.typesPage
     }
@@ -12,9 +11,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateHeating: (price, selectedId) => {
-            debugger
-            let action = updateHeatingAC(price, selectedId);
+        updateHeating: (price, selectedId, name) => {
+            let action = updateHeatingAC(price, selectedId, name);
             dispatch(action);
         }
     }

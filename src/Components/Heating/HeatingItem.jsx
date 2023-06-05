@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Heating.module.css";
+import s from "../Materials/Materials.module.css";
 
 function HeatingItem(props) {
     let isActive
@@ -8,7 +8,7 @@ function HeatingItem(props) {
     const containerTypeClass = isActive ? s.containerTypeActive : s.containerType
 
     return (
-        <div key={props.id} className={containerTypeClass} onClick={() => props.updateHeating(props.price, props.id)}>
+        <div key={props.id} className={containerTypeClass} onClick={() => props.updateHeating(props.price, props.id, props.name)}>
             <div className={s.parent}>
                 <img src={props.img}/>
                 <div className={s.child}>

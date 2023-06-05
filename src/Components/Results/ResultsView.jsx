@@ -1,28 +1,37 @@
 import React from 'react'
 import icon from '../../Images/StairsTypes/Result/icon.png'
 import s from './Results.module.css'
+import Contact from "../Contact/Contact";
 
 
 function ResultsView(props) {
-    debugger
     let state = props.state
-
+    let text = `Примерная стоимость моего дома = ${state.allSum},\n 
+    Параметры: 
+    План дома: ${state.homeSelectedType},
+    Фундамент: ${state.baseSelectedType},
+    Стены: ${state.wallSelectedType},
+    Крыша: ${state.roofSelectedType},
+    Отопление: ${state.heatingSelectedType},
+    Окна: ${state.windowSelectedName},
+    Напольное покрытие: ${state.flowSelectedName},
+    `
     return (
         <div className={s.typesLayer}>
-            <div>
-                <p>Основываясь на выбранные вами параметры, была расчитана примерная стоимость постройки вашего дома.
-                    При расчете были учтены основные парметры. Для уточнения суммы
-                    и тонкостей расчета вам следует связаться с нами любым удобным для вас способом.</p>
-                <p>При расчете были учтены: </p>
-                <ul>
-                    <li>Тип фундамента</li>
-                    <li>Материал стен</li>
-                    <li>Материал покрытия крыши</li>
-                    <li>Отопление в доме</li>
-                </ul>
+            {/*<div className={s.description}>
+                <p>Размеры конструкции: Высота - {state.stairsHeight}, Ширина - {state.stairsWidth}</p>
+                <p>Количество ступеней ≈ {state.countStages}</p>
+                <p>Высота проема между ступенями ≈ 14 см</p>
             </div>
-            <div><h2>Итоговая стоимость = {state.allSum}</h2></div>
+            <div className={s.price}>
+                <p>
+                    Примерная стоимость Вашей лестницы = {state.allSum}
+                </p>
+            </div>*/}
+
+            <Contact text={text}/>
         </div>
+
     )
 }
 

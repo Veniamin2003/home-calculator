@@ -24,12 +24,12 @@ import wallV2 from "../Images/StairsTypes/anderstage/2V.png"
 import wall3 from "../Images/StairsTypes/anderstage/3.jpg"
 import wallV3 from "../Images/StairsTypes/anderstage/3V.png"
 
-import paint1 from "../Images/StairsTypes/paint/1.jpg"
-import paintView1 from "../Images/StairsTypes/paint/1View.png"
-import paint2 from "../Images/StairsTypes/paint/2.jpg"
-import paintView2 from "../Images/StairsTypes/paint/2View.png"
-import paint3 from "../Images/StairsTypes/paint/3.jpg"
-import paintView3 from "../Images/StairsTypes/paint/3View.png"
+import roof1 from "../Images/StairsTypes/paint/1.jpg"
+import roofView1 from "../Images/StairsTypes/paint/1View.png"
+import roof2 from "../Images/StairsTypes/paint/2.jpg"
+import roofView2 from "../Images/StairsTypes/paint/2View.png"
+import roof3 from "../Images/StairsTypes/paint/3.jpg"
+import roofView3 from "../Images/StairsTypes/paint/3View.png"
 
 import heating1 from "../Images/StairsTypes/heating/1.jpg"
 import heatingV1 from "../Images/StairsTypes/heating/1V.png"
@@ -38,14 +38,27 @@ import heatingV2 from "../Images/StairsTypes/heating/2V.png"
 import heating3 from "../Images/StairsTypes/heating/3.jpg"
 import heatingV3 from "../Images/StairsTypes/heating/3V.png"
 
+import flow1 from "../Images/StairsTypes/flow/laminat.jpg"
+import flow2 from "../Images/StairsTypes/flow/parket.jpg"
+import flow3 from "../Images/StairsTypes/flow/linoleum.jpg"
+import flow4 from "../Images/StairsTypes/flow/cafel1.jpg"
+
+
+import window1 from "../Images/StairsTypes/Windows/1.png"
+import window2 from "../Images/StairsTypes/Windows/2.png"
+import window3 from "../Images/StairsTypes/Windows/3.png"
+import window4 from "../Images/StairsTypes/Windows/4_1.png"
+
 const UPDATE_TYPE = 'UPDATE_TYPE';
 const UPDATE_MATERIAL = 'UPDATE_MATERIAL';
 const UPDATE_WIDTH_STAGES = 'UPDATE_WIDTH_STAGES';
 const UPDATE_HEIGHT_STAGES = 'UPDATE_HEIGHT_STAGES';
 const COUNT_ALL_SUM = 'COUNT_ALL_SUM';
 const UPDATE_ANDER_STAGE = 'UPDATE_ANDER_STAGE';
-const UPDATE_PAINT_TYPE = 'UPDATE_PAINT_TYPE';
+const UPDATE_ROOF_TYPE = 'UPDATE_ROOF_TYPE';
 const UPDATE_HEATING = 'UPDATE_HEATING';
+const UPDATE_WINDOW = 'UPDATE_WINDOW';
+const UPDATE_FLOW = 'UPDATE_FLOW';
 
 let initialState = {
     stairsTypes: [
@@ -66,6 +79,20 @@ let initialState = {
         {id: 4, name: 'Копьё', img: concrete4, viewImg: concreteView4, price: 2500, description: "Песок - Фундаментная подушка - Арматура по периметру - Фундаментный массив. "},
     ],
 
+    windows: [
+        {id: 1, name: 'WHS-60', img: window1 , price: 990, description: "Оптимальное сочетание доступной цены и высоких показателей тепла."},
+        {id: 2, name: 'VEKA Euroline', img: window2, price: 1570, description: "Универсальный облегченный профиль с высокой тепло- и звукоизоляцией."},
+        {id: 3, name: 'VEKA Softline', img: window3, price: 2650, description: "Премиальная серия линейки VEKA для экстремальных условий нашего региона."},
+        {id: 4, name: 'VEKA Softline 82', img: window4, price: 3820, description: "Самый тихий профиль из всех брендов VEKA. Уникальные трехконтурные окна."},
+    ],
+
+    flows: [
+        {id: 1, name: 'Ламинат', img: flow1 , price: 1990, description: "Многослойное напольное покрытие, основой для которого служит плита ДВП или ДСП"},
+        {id: 2, name: 'Паркет', img: flow2, price: 1570, description: "Вид деревянного покрытия. Различают: штучный паркет, щитовой и наборный."},
+        {id: 3, name: 'Линолеум', img: flow3, price: 650, description: "Вид напольного покрытия, в настоящее время преимущественно из полимерных материалов."},
+        {id: 4, name: 'Кафель', img: flow4, price: 3820, description: "Пластины из обожжённой глины, на современном рынке чаще всего плоские."},
+    ],
+
     stairsSize: {
         size: [
             {id: 1, name: 'Ширина марша'},
@@ -79,14 +106,14 @@ let initialState = {
         { id: 3, name: 'Брус', img: wall3, viewImg: wallV3, price: 2500, description: "Делает помещение более уютным и теплым"}
     ],
 
-    paintType:
+    roofType:
         {
-            paintTypeItems:[
-                {id: 1, name:'Металло-черепица', img: paint1, viewImg: paintView1, price: 200, description:"Хорошо выдерживает нагрузку и воздействие внешних факторов, к тому же долговечна" },
-                {id: 2, name:'Мягкая кровля', img: paint2, viewImg: paintView2, price: 350, description:"Лента шириной 1,5-2 метра, состоящая из нескольких слоев гидроизоляционного материала." },
-                {id: 3, name:'Цементная черепица', img: paint3, viewImg: paintView3, price: 450, description:"Вид черепицы, изготавливаемый из портландцемента, кварцевого песка, с добавлением минеральных пигментов."},
+            roofTypeItems:[
+                {id: 1, name:'Металло-черепица', img: roof1, viewImg: roofView1, price: 200, description:"Хорошо выдерживает нагрузку и воздействие внешних факторов, к тому же долговечна" },
+                {id: 2, name:'Мягкая кровля', img: roof2, viewImg: roofView2, price: 350, description:"Лента шириной 1,5-2 метра, состоящая из нескольких слоев гидроизоляционного материала." },
+                {id: 3, name:'Цементная черепица', img: roof3, viewImg: roofView3, price: 450, description:"Вид черепицы, изготавливаемый из портландцемента, кварцевого песка, с добавлением минеральных пигментов."},
             ],
-            selectedPaintTypeId: 1,
+            selectedRoofTypeId: 1,
         },
 
     heatingType:
@@ -114,54 +141,69 @@ let initialState = {
         selectedAnderStageId: 1
     },
 
-    paintTypeSum: 0,
+    windowsParams: {
+        windowTypeSum: 0,
+        selectedWindowTypeId: 1
+    },
+
+    flowParams: {
+        flowTypeSum: 0,
+        selectedFlowTypeId: 1
+    },
+
+    roofTypeSum: 0,
     ppp: 0,
     allSum: 0,
     countStages: 0,
     stairsWidth: 0,
     stairsHeight: 0,
-    marchWidthSum: 0
+    marchWidthSum: 0,
+
+    homeSelectedType: "<<не выбрано>>",
+    baseSelectedType: "<<не выбрано>>",
+    wallSelectedType: "<<не выбрано>>",
+    roofSelectedType: "<<не выбрано>>",
+    heatingSelectedType: "<<не выбрано>>",
+    windowSelectedName: "<<не выбрано>>",
+    flowSelectedName: "<<не выбрано>>",
 };
 
 const typesReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_TYPE:
-            debugger
             return {
                 ...state,
                 typeSum: action.price,
-                selectedStairsTypesId: action.selectedId
+                selectedStairsTypesId: action.selectedId,
+                homeSelectedType: action.name
             }
 
         case UPDATE_MATERIAL:
-            debugger
             return {
                 ...state,
                 materialSum: action.price,
-                selectedMaterialId: action.selectedId
+                selectedMaterialId: action.selectedId,
+                baseSelectedType: action.name
             };
 
         case UPDATE_HEATING:
-            debugger
             return {
                 ...state,
                 heatingSum: action.price,
-                selectedHeatingId: action.selectedId
+                selectedHeatingId: action.selectedId,
+                heatingSelectedType: action.name
             };
 
         case UPDATE_WIDTH_STAGES:
-            debugger
             let a = action.newCount
             let b = 0
 
             if (a < 100 && a > 0)
             {
-                debugger
                 b = 300
             }
             else if (a > 100 && a < 200)
             {
-                debugger
                 b = 600
             }
             else {
@@ -177,7 +219,6 @@ const typesReducer = (state = initialState, action) => {
             };
 
         case UPDATE_HEIGHT_STAGES:
-
             return {
                 ...state,
                 stairsHeight: action.newCount,
@@ -185,28 +226,41 @@ const typesReducer = (state = initialState, action) => {
             };
 
         case COUNT_ALL_SUM:
-            debugger
             return {
                 ...state,
-                allSum: (state.materialSum + state.anderStageSum + state.paintTypeSum + state.heatingSum) * (state.typeSum * 2)
+                allSum: (state.materialSum + state.anderStageSum + state.roofTypeSum + state.heatingSum) * (state.typeSum * 2)
             };
 
         case UPDATE_ANDER_STAGE:
-            debugger
-
-
             return {
                 ...state,
                 anderStageSum: action.price,
-                selectedAnderStageId: action.selectedId
+                selectedAnderStageId: action.selectedId,
+                wallSelectedType: action.name
             };
 
-        case UPDATE_PAINT_TYPE:
-            debugger
+        case UPDATE_ROOF_TYPE:
             return {
                 ...state,
-                paintTypeSum: action.price,
-                selectedPaintTypeId: action.selectedId
+                roofTypeSum: action.price,
+                selectedRoofTypeId: action.selectedId,
+                roofSelectedType: action.name
+            };
+
+        case UPDATE_WINDOW:
+            return {
+                ...state,
+                windowTypeSum: action.price,
+                selectedWindowTypeId: action.selectedId,
+                windowSelectedName: action.name
+            };
+
+        case UPDATE_FLOW:
+            return {
+                ...state,
+                flowTypeSum: action.price,
+                selectedFlowTypeId: action.selectedId,
+                flowSelectedName: action.name
             };
 
         default:
@@ -214,16 +268,18 @@ const typesReducer = (state = initialState, action) => {
     }
 }
 
-export const updateTypeAC = (price, selectedId) => ({type: UPDATE_TYPE, price: price, selectedId: selectedId})
-export const updateMaterialAC = (price, selectedId) => ({type: UPDATE_MATERIAL, price: price, selectedId: selectedId})
-export const updateHeatingAC = (price, selectedId) => ({type: UPDATE_HEATING, price: price, selectedId: selectedId})
+export const updateTypeAC = (price, selectedId, name) => ({type: UPDATE_TYPE, price: price, selectedId: selectedId, name: name})
+export const updateMaterialAC = (price, selectedId, name) => ({type: UPDATE_MATERIAL, price: price, selectedId: selectedId, name: name})
+export const updateHeatingAC = (price, selectedId, name) => ({type: UPDATE_HEATING, price: price, selectedId: selectedId, name: name})
 
 export const updateWidthStagesAC = (count) => ({type: UPDATE_WIDTH_STAGES, newCount: count})
 export const updateHeightStagesAC = (count) => ({type: UPDATE_HEIGHT_STAGES, newCount: count})
 
 export const countAllSumAC = () => ({type: COUNT_ALL_SUM})
-export const updateAnderStageAC = (price, selectedId) => ({type: UPDATE_ANDER_STAGE, price: price, selectedId: selectedId})
-export const updatePaintTypeAC = (price, selectedId) => ({type: UPDATE_PAINT_TYPE, price: price, selectedId: selectedId})
+export const updateAnderStageAC = (price, selectedId, name) => ({type: UPDATE_ANDER_STAGE, price: price, selectedId: selectedId, name: name})
+export const updateRoofTypeAC = (price, selectedId, name) => ({type: UPDATE_ROOF_TYPE, price: price, selectedId: selectedId, name: name})
+export const updateWindowTypeAC = (price, selectedId, name) => ({type: UPDATE_WINDOW, price: price, selectedId: selectedId, name: name})
+export const updateFlowTypeAC = (price, selectedId, name) => ({type: UPDATE_FLOW, price: price, selectedId: selectedId, name: name})
 
 
 export default typesReducer;

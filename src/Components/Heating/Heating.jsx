@@ -3,12 +3,10 @@ import s from './../ContainerCSSModule/Container.module.css'
 import HeatingItem from "./HeatingItem";
 
 function Heating(props) {
-    debugger
     let state = props.typesPage
 
-    let updateHeating = (price, selectedId) => {
-        debugger
-        props.updateHeating(price, selectedId);
+    let updateHeating = (price, selectedId, name) => {
+        props.updateHeating(price, selectedId, name);
     }
     return (
         <div className={s.typesLayer}>
