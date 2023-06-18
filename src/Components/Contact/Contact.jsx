@@ -9,12 +9,40 @@ import emailjs from "emailjs-com"
 import {NavLink} from "react-router-dom";
 import Modal from "../Modal/Modal";
 
-const Contact = ({text}) => {
+const Contact = (props) => {
+    let state = props.state
     const [modalActive, setModalActive] = useState(false);
 
     const form = useRef();
 
     const navigate = useNavigate();
+
+    let textTask = `Примерная стоимость моего дома = ${state.allSum},\n 
+    Параметры: 
+    План дома: ${state.homeSelectedType},
+    Фундамент: ${state.baseSelectedType},
+    Стены: ${state.wallSelectedType},
+    Крыша: ${state.roofSelectedType},
+    Отопление: ${state.heatingSelectedType},
+    Окна: ${state.windowSelectedName},
+    Напольное покрытие: ${state.flowSelectedName},`
+
+    let allSum = state.allSum;
+    let homeSelectedType = state.homeSelectedType;
+    let baseSelectedType = state.baseSelectedType;
+    let wallSelectedType = state.wallSelectedType;
+    let roofSelectedType = state.roofSelectedType;
+    let heatingSelectedType = state.heatingSelectedType;
+    let windowSelectedName = state.windowSelectedName;
+    let flowSelectedName = state.flowSelectedName;
+
+    let addTask = () => {
+        props.addTask(allSum, homeSelectedType, baseSelectedType, wallSelectedType, roofSelectedType, heatingSelectedType, windowSelectedName, flowSelectedName);
+    }
+
+    let test = () => {
+        console.log(state.tasks);
+    }
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -25,6 +53,8 @@ const Contact = ({text}) => {
 
         e.target.reset();
         setModalActive(true);
+
+        addTask();
     };
 
     return (
@@ -33,37 +63,11 @@ const Contact = ({text}) => {
                 <h3>Оставьте заявку на полный расчет прямо сейчас</h3>
             </div>
 
-
             <div className="container contact__container">
-
-                {/*<div className="contact__options">
-                    <article className="contact__option">
-                        <MdOutlineEmail className="contact__option-icon"/>
-                        <h4>Email</h4>
-                        <h5>resume@veniamin-petrov.ru</h5>
-                        <a href="mailto:resume@veniamin-petrov.ru" target="_blank">Отправить сообщение</a>
-                    </article>
-
-                    <article className="contact__option">
-                        <FaTelegramPlane className="contact__option-icon"/>
-                        <h4>Telegram</h4>
-                        <h5>@spainvenk</h5>
-                        <a href="https://msngr.link/tg/@spainvenk" target="_blank">Написать в Telegram</a>
-
-                    </article>
-
-                    <article className="contact__option">
-                        <ImWhatsapp className="contact__option-icon"/>
-                        <h4>WhatsApp</h4>
-                        <h5>+7(992)503-64-01</h5>
-                        <a href="https://msngr.link/wa/79925036401>" target="_blank">Написать в WhatsApp</a>
-                    </article>
-                </div>*/}
-
                 <form ref={form} onSubmit={sendEmail}>
                     <input type="text" name="name" placeholder="Ваше полное имя" required />
                     <input type="phone" name="phone" placeholder="Ваш номер телефона" required />
-                    <textarea name="message" rows="7" placeholder="Опишите вашу поломку" value={text} required />
+                    <textarea name="message" rows="7" placeholder="Опишите вашу поломку" value={textTask} required />
                     <button type="submit" className="btn btn-primary-two">Отправить сообщение</button>
                 </form>
             </div>

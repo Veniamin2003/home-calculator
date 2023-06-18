@@ -22,4 +22,4 @@ function PaintType(props) {
     )
 }
 
-export default PaintType
+export default PaintType;

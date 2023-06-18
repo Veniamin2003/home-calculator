@@ -1,8 +1,10 @@
-import {HiHomeModern} from "react-icons/hi2";
 import img from "../../Images/icons8-white.png"
 import React, {Component} from "react";
 import "./NavCalc.css"
-/*import q from "../../Images/All/menu-bg-one.png"*/
+import {Link} from "react-router-dom";
+import store from "./../../redux/redux-store"
+import {connect} from "react-redux";
+import s from "../Materials/Materials.module.css";
 
 class NavCalc extends Component {
     state= {
@@ -19,6 +21,7 @@ class NavCalc extends Component {
 
 
     render () {
+        const liClass = (this.props.typesPage.nameAU !== "") ? 'liActive' : 'liDisabled'
         return (
             <>
                 <div className="navbar__calc">
@@ -41,16 +44,12 @@ class NavCalc extends Component {
 
                             {/*<li><a href="#price_photos">Фото работ</a></li>
                             <li><a href="#contact">Контакты</a></li>*/}
+                            <li className={liClass}><Link to="/profile">Мои профиль</Link></li>
+                            <li className={liClass}><Link to="/my-tasks">Мои заявки</Link></li>
+                            <li className={liClass}><Link to="/calc">Калькулятор</Link></li>
                             <li><a href="http://home-calc.tilda.ws">На главную</a></li>
-                            <li className="nav_phone_mbl" >
-                                <a href="tel:89085712253">+7(900)076-82-49</a>
-                                <p>Рассчитаем уже сегодня</p>
-                            </li>
-
-                            {/*<li className="nav_phone_desc">
-                                <h3>+7(900)076-82-49</h3>
-                                <p>Рассчитаем уже сегодня</p>
-                            </li>*/}
+                            <li className="user_name">{this.props.typesPage.nameAU}</li>
+                            <li className="user_name">{this.props.typesPage.lnameAU}</li>
                         </ul>
                     </div>
 
@@ -63,4 +62,16 @@ class NavCalc extends Component {
     }
 }
 
-export default NavCalc;
+let mapStateToProps = (state) => {
+
+    return {
+        typesPage: state.typesPage
+    }
+}
+let mapDispatchToProps = (dispatch) => {
+    return {
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavCalc);

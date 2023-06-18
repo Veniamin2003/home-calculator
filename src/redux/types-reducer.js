@@ -59,7 +59,12 @@ const UPDATE_ROOF_TYPE = 'UPDATE_ROOF_TYPE';
 const UPDATE_HEATING = 'UPDATE_HEATING';
 const UPDATE_WINDOW = 'UPDATE_WINDOW';
 const UPDATE_FLOW = 'UPDATE_FLOW';
+const ADD_TASK = 'ADD_TASK';
+const UPDATE_LOGIN_STATUS = 'UPDATE_LOGIN_STATUS';
+const ADD_USER = 'ADD_USER';
+const UPDATE_ACTIVE_USER = 'UPDATE_ACTIVE_USER';
 
+let idTask = 1;
 let initialState = {
     stairsTypes: [
         {id: 1, name: 'Ливадийский пентхаус', img: type1, price: 139,
@@ -123,6 +128,14 @@ let initialState = {
             {id: 3, name: 'Электро теплый пол', img: heating3, viewImg: heatingV3, price: 1500, description:"Отопление скрыто под полом. отапливается за счет электричества."}
         ],
 
+    tasks:
+        [],
+
+    users: [
+        {id:1, name: "Виктор", lname:"Красильников", login: "vik123", password:"12345"},
+        {id:2, name: "Александр", lname:"Николаев", login: "sasha333", password:"12345"},
+    ],
+
     heatingTypesParams : {
         selectedHeatingId: 1,
     },
@@ -150,6 +163,15 @@ let initialState = {
         flowTypeSum: 0,
         selectedFlowTypeId: 1
     },
+
+    idTask: 1,
+    isLogin: true,
+    idAU: "",
+    nameAU: "",
+    lnameAU: "",
+    loginAU: "",
+    passwordAU: "",
+
 
     roofTypeSum: 0,
     ppp: 0,
@@ -263,6 +285,54 @@ const typesReducer = (state = initialState, action) => {
                 flowSelectedName: action.name
             };
 
+        case UPDATE_ACTIVE_USER:
+            return {
+                ...state,
+                idAU: action.id,
+                nameAU: action.name,
+                lnameAU: action.lname,
+                loginAU: action.login,
+                passwordAU: action.password,
+            };
+
+        case UPDATE_LOGIN_STATUS:
+            return {
+                ...state,
+                isLoginUser: action.isLogin,
+            };
+
+        case ADD_TASK:
+            let newTask = {
+                id: 1,
+                taskSum: action.allSum,
+                baseSelectedType: action.baseSelectedType,
+                wallSelectedType: action.wallSelectedType,
+                roofSelectedType: action.roofSelectedType,
+                heatingSelectedType: action.heatingSelectedType,
+                windowSelectedName: action.windowSelectedName,
+                flowSelectedName: action.flowSelectedName,
+                taskHomeType: action.homeSelectedType
+            };
+            return {
+                ...state,
+                tasks: [...state.tasks, newTask],
+            };
+
+        case ADD_USER:
+            let idUser = 0;
+
+            let newUser = {
+                id: ++idUser,
+                name: action.nameUser,
+                lname: action.lnameUser,
+                login: action.loginUser,
+                password: action.passwordUser,
+            };
+            return {
+                ...state,
+                users: [...state.users, newUser],
+            };
+
         default:
             return state;
     }
@@ -280,6 +350,20 @@ export const updateAnderStageAC = (price, selectedId, name) => ({type: UPDATE_AN
 export const updateRoofTypeAC = (price, selectedId, name) => ({type: UPDATE_ROOF_TYPE, price: price, selectedId: selectedId, name: name})
 export const updateWindowTypeAC = (price, selectedId, name) => ({type: UPDATE_WINDOW, price: price, selectedId: selectedId, name: name})
 export const updateFlowTypeAC = (price, selectedId, name) => ({type: UPDATE_FLOW, price: price, selectedId: selectedId, name: name})
+
+export const addTaskAC = (allSum, homeSelectedType, baseSelectedType, wallSelectedType, roofSelectedType, heatingSelectedType, windowSelectedName, flowSelectedName) =>
+    ({type: ADD_TASK,
+        homeSelectedType: homeSelectedType,
+        baseSelectedType: baseSelectedType,
+        wallSelectedType: wallSelectedType,
+        roofSelectedType: roofSelectedType,
+        heatingSelectedType: heatingSelectedType,
+        windowSelectedName: windowSelectedName,
+        flowSelectedName: flowSelectedName,
+        allSum: allSum })
+export const updateIsLoginAC = (isLogin) => ({type: UPDATE_LOGIN_STATUS, isLogin: isLogin})
+export const updateActiveUserAC = (id, name, lname, login, password) => ({type: UPDATE_ACTIVE_USER, id: id, name: name, lname: lname, login: login, password: password})
+export const addUserAC = (nameUser, lnameUser, loginUser, passwordUser) => ({type: ADD_USER, nameUser: nameUser, lnameUser: lnameUser, loginUser: loginUser, passwordUser: passwordUser})
 
 
 export default typesReducer;

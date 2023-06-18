@@ -1,0 +1,13 @@
+.task__container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100vw;
+    min-height: 700px;
+    height: auto;
+    background: rgb(244, 253, 255);
+}
+
+.name_block h2{
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+}

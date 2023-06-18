@@ -84,6 +84,19 @@
     padding-bottom: 0.7rem;
 }
 
+.user_name {
+    color: #ffded6;
+    font-size: 20px;
+}
+
+.liActive {
+    display: block;
+}
+
+.liDisabled {
+    display: none;
+}
+
 @media screen and (max-width: 1024px){
     .navbar__calc {
         padding: 10px 35px

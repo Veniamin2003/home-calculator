@@ -16,20 +16,14 @@ function ResultsView(props) {
     Окна: ${state.windowSelectedName},
     Напольное покрытие: ${state.flowSelectedName},
     `
+
+    let addTask = (allSum, homeSelectedType, baseSelectedType) => {
+        props.addTask(allSum, homeSelectedType, baseSelectedType);
+    }
+
     return (
         <div className={s.typesLayer}>
-            {/*<div className={s.description}>
-                <p>Размеры конструкции: Высота - {state.stairsHeight}, Ширина - {state.stairsWidth}</p>
-                <p>Количество ступеней ≈ {state.countStages}</p>
-                <p>Высота проема между ступенями ≈ 14 см</p>
-            </div>
-            <div className={s.price}>
-                <p>
-                    Примерная стоимость Вашей лестницы = {state.allSum}
-                </p>
-            </div>*/}
-
-            <Contact text={text}/>
+            <Contact text={text} addTask={addTask}/>
         </div>
 
     )

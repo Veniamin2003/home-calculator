@@ -3,6 +3,7 @@ import s from './../ContainerCSSModule/Container.module.css'
 import StairsTypesItem from "./Types/StairsTypesItem";
 import ParamsViewContainer from "../ParamsView/ParamsViewContainer";
 import Navbar from "../Navbar/Navbar";
+import Data from "./../../HomeData/home-types.json"
 
 function StairsTypes(props) {
     let state = props.typesPage

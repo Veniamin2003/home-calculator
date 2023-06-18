@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {countAllSumAC} from "../../redux/types-reducer";
+import {addTaskAC, countAllSumAC} from "../../redux/types-reducer";
 import Results from "./Results";
 
 let mapStateToProps = (state) => {
@@ -13,6 +13,11 @@ let mapDispatchToProps = (dispatch) => {
     return {
         countAllSum: () => {
             let action = countAllSumAC();
+            dispatch(action);
+        },
+
+        addTask: (allSum, homeSelectedType, baseSelectedType, wallSelectedType, roofSelectedType, heatingSelectedType, windowSelectedName, flowSelectedName) => {
+            let action = addTaskAC(allSum, homeSelectedType, baseSelectedType, wallSelectedType, roofSelectedType, heatingSelectedType, windowSelectedName, flowSelectedName);
             dispatch(action);
         }
     }

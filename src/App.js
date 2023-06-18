@@ -1,64 +1,72 @@
 import './App.css';
-import StairsTypesContainer from "./Components/StairsTypes/StairsTypesContainer";
-import MaterialsContainer from "./Components/Materials/MaterialsContainer";
-import ResultsContainer from "./Components/Results/ResultsContainer";
-import AnderStageContainer from "./Components/AnderStage/AnderStageContainer";
-import PaintTypeContainer from "./Components/PaintType/PaintTypeContainer";
-import HeatingContainer from "./Components/Heating/HeatingContainer";
-import ParamsViewContainer from "./Components/ParamsView/ParamsViewContainer";
-import WindowTypeContainer from "./Components/WindowType/WindowTypeContainer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Form from './Components/Form/Form';
 import Footer from "./Components/Footer/Footer";
 import NavCalc from "./Components/NavTop/NavCalc";
-import FlowTypeContainer from "./Components/FlowType/FlowTypeContainer";
-
+import React from "react";
+import HomeTypesPage from "./Pages/HomeTypesPage";
+import BaseTypesPage from "./Pages/BaseTypesPage";
+import WallTypesPage from "./Pages/WallTypesPage";
+import RoofTypesPage from "./Pages/RoofTypesPage";
+import HeatingTypesPage from "./Pages/HeatingTypesPage";
+import WindowTypesPage from "./Pages/WindowTypesPage";
+import FlowTypesPage from "./Pages/FlowTypesPage";
+import ResultTypesPage from "./Pages/ResultTypesPage";
+import Login from "./Components/Login/Login";
+import TasksContainer from "./Components/Tasks/TasksContainer";
+import LoginContainer from "./Components/Login/LoginContainer";
+import RegContainer from "./Components/Login/Registration/RegContainer";
+import MyProfileContainer from "./Components/MyProfile/MyProfileContainer";
 
 function App(props) {
-    debugger
     return (
         <BrowserRouter>
             <NavCalc />
-            <div className='app-wrapper'>
-                {/*<StairTypeViewContainer />*/}
-
-                <ParamsViewContainer />
-                <Navbar/>
-                <div className='app-wrapper-content'>
+                <div>
                     <Routes>
                         <Route path='/'
-                               element={<StairsTypesContainer/>}/>
+                               element={<LoginContainer/>}/>
+                        <Route path='/login'
+                               element={<LoginContainer/>}/>
 
-                        <Route path='/home-types'
-                               element={<StairsTypesContainer/>}/>
+                        <Route path='/registration'
+                               element={<RegContainer/>}/>
 
-                        <Route path='/home-material'
-                               element={<MaterialsContainer />}/>
+                        <Route path='/profile'
+                               element={<MyProfileContainer/>}/>
 
-                        {<Route path='/wall-type'
-                                element={<AnderStageContainer />}/>}
+                        <Route path='/my-tasks'
+                               element={<TasksContainer/>}/>
 
-                        <Route path='/roof-type'
-                               element={<PaintTypeContainer />}/>
+                        <Route path='/calc'
+                               element={<HomeTypesPage/>} />
 
-                        <Route path='/heating'
-                               element={<HeatingContainer />}/>
+                        <Route path='/calc/home-types'
+                               element={<HomeTypesPage/>}/>
 
-                        <Route path='/windows'
-                               element={<WindowTypeContainer />}/>
+                        <Route path='/calc/home-material'
+                               element={<BaseTypesPage/>}/>
 
-                        <Route path='/flow'
-                               element={<FlowTypeContainer />}/>
+                        {<Route path='/calc/wall-type'
+                                element={<WallTypesPage/>}/>}
 
-                        <Route path='/results'
-                               element={<ResultsContainer />}/>
+                        <Route path='/calc/roof-type'
+                               element={<RoofTypesPage/>}/>
 
-                        <Route path='/form'
-                               element={<Form />}/>
+                        <Route path='/calc/heating'
+                               element={<HeatingTypesPage/>}/>
+
+                        <Route path='/calc/windows'
+                               element={<WindowTypesPage/>}/>
+
+                        <Route path='/calc/flow'
+                               element={<FlowTypesPage/>}/>
+
+                        <Route path='/calc/results'
+                               element={<ResultTypesPage/>}/>
+
+
                     </Routes>
                 </div>
-            </div>
             <Footer />
         </BrowserRouter>
 

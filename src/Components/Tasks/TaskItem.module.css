@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto&display=swap');
+
+.task_item {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 30px;
+    height: max-content;
+    background-color: rgba(131, 95, 67, 0.6);
+}
+.task_item h2{
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+.child {
+    width: 25%;
+    padding: 3rem 3rem 5rem 3rem;
+    background: #f3d5c4;
+    margin: 0.3rem;
+    border-radius: 10px;
+}
+
+.child_second {
+    padding: 2rem;
+    background: #f3d5c4;
+    margin: 0.3rem;
+    border-radius: 10px;
+}
+
+.child div {
+    padding-top: 20px;
+}
+.first_block {
+    display: flex;
+}
+
+.second__block {
+
+}
