@@ -14,9 +14,11 @@ let mapDispatchToProps = (dispatch) => {
         updateType: (price, selectedId, name) => {
             let action = updateTypeAC(price, selectedId, name);
             dispatch(action);
-        }
+        },
     }
 }
+
+
 
 const StairsTypesContainer = connect(mapStateToProps, mapDispatchToProps) (StairsTypes);
 

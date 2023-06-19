@@ -1,0 +1,32 @@
+{
+  "flowTypes": [
+    {
+      "id": "1",
+      "name": "Ламинат",
+      "img": "https://2.downloader.disk.yandex.ru/preview/27ac3c500b84adc3d68f58e63a606b3cbd770b41962cee23614b9a724851dd11/inf/eZNp8v1CKPTsjYN8f5Z-QS0QLrF7RVByFOgmkbP9ThWsPD3Beh4zQ2bFaA-vdcWFmorKur4g0Ho56xzfdS6Q4g%3D%3D?uid=1105779884&filename=laminat.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1920x969",
+      "price": "1990",
+      "description": "Многослойное напольное покрытие, основой для которого служит плита ДВП или ДСП"
+    },
+    {
+      "id": "2",
+      "name": "Паркет",
+      "img": "https://4.downloader.disk.yandex.ru/preview/5d303592e1cd02dbb42a5e1aa75b90418243af557a35f72a161acec96d96e261/inf/U7Ljy0xkx83UKGPMw568kUW2ujmgni9tEjnHBrzV4SWQUjIoH39dXw3aKHrgU5fOaAnNgIgvNmTOQqA1e7N9sw%3D%3D?uid=1105779884&filename=parket.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1920x969",
+      "price": "1570",
+      "description": "Вид деревянного покрытия. Различают: штучный паркет, щитовой и наборный."
+    },
+    {
+      "id": "3",
+      "name": "Линолеум",
+      "img": "https://2.downloader.disk.yandex.ru/preview/9e02574192144d292659157b021147500012a266b425d49582511e278a8feb27/inf/pg2byKhAGE-hs5GtPvZv2eS4V1S8uTNpUWv3GhUdiWPSpJJ5H0KApWRr5rmtaA41q--nlj47Hgpu6VgbxguieQ%3D%3D?uid=1105779884&filename=linoleum.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1920x969",
+      "price": "650",
+      "description": "Вид напольного покрытия, в настоящее время преимущественно из полимерных материалов."
+    },
+    {
+      "id": "4",
+      "name": "Кафель",
+      "img": "https://1.downloader.disk.yandex.ru/preview/86c6eb379540d1cebc6af970127372f90f51fa95ae56e239ab60399f57914b5b/inf/r5taS2Pyg-Asqlea13X18V3pMpYeUdALKmogLdqjkwjaVOwKYDn2X-iM8xeTJQjx7kKnV3tJcOig3s_iw7wGtw%3D%3D?uid=1105779884&filename=cafel1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1920x969",
+      "price": "3820",
+      "description": "Пластины из обожжённой глины, на современном рынке чаще всего плоские."
+    }
+  ]
+}

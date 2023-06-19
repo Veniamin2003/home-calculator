@@ -17,26 +17,31 @@ function Reg(props) {
 
     const handleClick = () => {
         if(name.current.value !== "" && lname.current.value !== "" && login.current.value !== "" && password.current.value !== "") {
-            for (const user of users) {
-                if (user.login !== login.current.value) {
-                    isOriginal = true;
-                } else {
-                    isOriginal = false;
-                    break
+            if ((login.current.value.length <= 30 && login.current.value.length >= 5) && (password.current.value.length <= 30 && password.current.value.length >= 5)) {
+                for (const user of users) {
+                    if (user.login !== login.current.value) {
+                        isOriginal = true;
+                    } else {
+                        isOriginal = false;
+                        break
+                    }
                 }
-            }
 
-            if (isOriginal) {
-                navigate('/');
-                alert("Вы успешно зарегистрированы!");
-                let nameUser = name.current.value;
-                let lnameUser = lname.current.value;
-                let loginUser = login.current.value;
-                let passwordUser = password.current.value;
+                if (isOriginal) {
+                    navigate('/');
+                    alert("Вы успешно зарегистрированы!");
+                    let nameUser = name.current.value;
+                    let lnameUser = lname.current.value;
+                    let loginUser = login.current.value;
+                    let passwordUser = password.current.value;
 
-                props.addUser(nameUser, lnameUser, loginUser, passwordUser);
+                    props.addUser(nameUser, lnameUser, loginUser, passwordUser);
+                } else {
+                    alert("Пользователь с таким логином уже есть");
+                }
             } else {
-                alert("Пользователь с таким логином уже есть");
+                alert("Логин и пароль должны содержать от 5 до 30 символов");
+
             }
         }
         else {

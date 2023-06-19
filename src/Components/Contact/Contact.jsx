@@ -17,7 +17,7 @@ const Contact = (props) => {
 
     const navigate = useNavigate();
 
-    let textTask = `Примерная стоимость моего дома = ${state.allSum},\n 
+    let textTask = `Примерная стоимость моего дома = ${state.allSum} рублей,\n 
     Параметры: 
     План дома: ${state.homeSelectedType},
     Фундамент: ${state.baseSelectedType},

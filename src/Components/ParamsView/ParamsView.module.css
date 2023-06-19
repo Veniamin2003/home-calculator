@@ -6,6 +6,13 @@
     margin-top: 3rem;
 }
 
+.allBlock h3 {
+    position: absolute;
+    font-size: 18px;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.73);
+}
+
 .mainBlock {
     display: grid;
     justify-items: center;

@@ -3,6 +3,7 @@ import React from "react";
 
 const ParamsChild = (props) => {
     return (
+
         <div key={props.id} className={s.paramChildItem}>
             <div className={s.paramChildElement}>
                 <img src={props.img}/>

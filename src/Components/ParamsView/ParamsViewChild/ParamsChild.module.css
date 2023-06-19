@@ -9,11 +9,13 @@
     height: 100%;
 
     background: #e3d3b2;
+
 }
 
 .paramChildItem img {
     width: 90%;
     height: 90%;
+    margin-top: 20px;
 }
 
 .paramChildItem:hover .paramChildElement {

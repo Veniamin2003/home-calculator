@@ -1,0 +1,36 @@
+{
+  "baseTypes": [
+    {
+      "id": "1",
+      "name": "WHS-60",
+      "img": "https://2.downloader.disk.yandex.ru/preview/b0b93a228ad116b20fa1a8f6d9f69eb087951628a4138a604352266ba294afc2/inf/7LQ1fOhg-6yJ9kXGbizzm27arvTUm7m_ZAOwMXAYF6ptEFfytrWXyANU1z94qV_9yQR-kwVS8ub56_gRxEpi5w%3D%3D?uid=1105779884&filename=1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "price": "990",
+      "viewImg": "https://2.downloader.disk.yandex.ru/preview/dd4d6edbd77881c2e51d4ec643fc76304b81959dd540f29403d7acfb9562ca0a/inf/PQraX3QDOShYIvWZwU9QQW7arvTUm7m_ZAOwMXAYF6pv--ygTCQwLFI4cgXlx_hq0ga4PqU_7JvpSfQvy03nkg%3D%3D?uid=1105779884&filename=1.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "description": "Оптимальное сочетание доступной цены и высоких показателей тепла."
+    },
+    {
+      "id": "2",
+      "name": "VEKA Euroline",
+      "img": "https://3.downloader.disk.yandex.ru/preview/a09751e2415042d68b8d094c077973f388ffd1a98a43c357493e3203b256b70c/inf/MLM-WqqX7VI0njqYWaCT227arvTUm7m_ZAOwMXAYF6r8eHM0oAmwQl0btnh5X0XmSATXjjq01_j_M4G1hDVbBw%3D%3D?uid=1105779884&filename=2.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "price": "1990",
+      "viewImg": "https://1.downloader.disk.yandex.ru/preview/c170b08eaae4004e6b73153e1b285a516f9dc283c4da305881755934daed9360/inf/TlG2CCg33CJ3S0R4rtoGSW7arvTUm7m_ZAOwMXAYF6qmLHDkeot2oqt5rYFyaN-l2rB8GC1xBLcERc3H_zsnuA%3D%3D?uid=1105779884&filename=2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "description": "Универсальный облегченный профиль с высокой тепло- и звукоизоляцией."
+    },
+    {
+      "id": "3",
+      "name": "VEKA Softline",
+      "img": "https://1.downloader.disk.yandex.ru/preview/acdf8247c58d54c1610a3596fbc490165aeb5a451d57683e54da6d12024b4908/inf/aLQIBwh3GQo9bbegJ3nhvG7arvTUm7m_ZAOwMXAYF6rkAl467hTSbh1Qi1L1FzMTS9sITPpupXAmwAluNguinA%3D%3D?uid=1105779884&filename=3.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "price": "3000",
+      "viewImg": "https://3.downloader.disk.yandex.ru/preview/71303bbaf1554679f50c35c03e5b8b38e68a2bbaedc1536fce20dc50bb46e9b5/inf/hPNxObEnXc0M8FY3LTy3v27arvTUm7m_ZAOwMXAYF6qKfZLWxjWX0q2W6sZ4ANsUAMtdad7MaJknVKi-zDJcMw%3D%3D?uid=1105779884&filename=3.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "description": "Премиальная серия линейки VEKA для экстремальных условий нашего региона."
+    },
+    {
+      "id": "4",
+      "name": "VEKA Softline 82",
+      "img": "https://3.downloader.disk.yandex.ru/preview/fcbf3f089f0eb4167f79c6c64c0c02169c8a464dfeb617ba9a484d4e1d09fbb0/inf/BoOFAIOx6xdi50ECd4HhxW7arvTUm7m_ZAOwMXAYF6qLqgLumUKNPeAVbW5VfDGCxEP2qfyrpP0pMuxdwZmJIQ%3D%3D?uid=1105779884&filename=4.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "price": "2500",
+      "viewImg": "https://4.downloader.disk.yandex.ru/preview/b29d99c6844eb2f6164d9f0a8e02326f1c6384f4323b975b3c26253f3d696d63/inf/KQcgZ6iXB96bwkz-Rn0Yhm7arvTUm7m_ZAOwMXAYF6pBUEMVbXo4Sr5EE010Mh0VbPoqy2E2w0zKX6MpQJVJZQ%3D%3D?uid=1105779884&filename=4.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1105779884&tknv=v2&size=1903x969",
+      "description": "Самый тихий профиль из всех брендов VEKA. Уникальные трехконтурные окна."
+    }
+  ]
+}

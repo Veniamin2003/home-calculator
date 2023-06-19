@@ -191,6 +191,7 @@ let initialState = {
 };
 
 const typesReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case UPDATE_TYPE:
             return {
