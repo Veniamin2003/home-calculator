@@ -1,10 +1,6 @@
 import React from 'react'
 import s from './../ContainerCSSModule/Container.module.css'
 import StairsTypesItem from "./Types/StairsTypesItem";
-import ParamsViewContainer from "../ParamsView/ParamsViewContainer";
-import Navbar from "../Navbar/Navbar";
-import Data from "./../../HomeData/home-types.json"
-import HomeTypes from "../../HomeData/home-types.json"
 
 function StairsTypes(props) {
     let state = props.typesPage
@@ -15,13 +11,13 @@ function StairsTypes(props) {
 
     return (
         <div className={s.typesLayer}>
-            {/*{state.stairsTypes.map(el => <StairsTypesItem id={el.id} img={el.img} description={el.description}
-                                                          name={el.name} price={el.price}
-                                                          selectedId={state.selectedStairsTypesId} onTypeChange={onTypeChange}/>)}*/}
-
-            {HomeTypes.homeTypes.map(el => <StairsTypesItem id={el.id} img={el.img} description={el.description}
+            {state.stairsTypes.map(el => <StairsTypesItem id={el.id} img={el.img} description={el.description}
                                                           name={el.name} price={el.price}
                                                           selectedId={state.selectedStairsTypesId} onTypeChange={onTypeChange}/>)}
+
+            {/*{HomeTypes.homeTypes.map(el => <StairsTypesItem id={el.id} img={el.img} description={el.description}
+                                                          name={el.name} price={el.price}
+                                                          selectedId={state.selectedStairsTypesId} onTypeChange={onTypeChange}/>)}*/}
         </div>
     )
 }

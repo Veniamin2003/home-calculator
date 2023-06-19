@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './../ContainerCSSModule/Container.module.css'
 import FlowTypeItem from "./FlowTypeItem";
-import FlowTypes from "../../HomeData/flow-types.json"
 
 function FlowType(props) {
     let state = props.typesPage
@@ -12,13 +11,13 @@ function FlowType(props) {
     return (
         <div>
             <div className={s.typesLayer}>
-                {/*{state.flows.map(el => <FlowTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
+                {state.flows.map(el => <FlowTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
                                                        price={el.price} flowTypeSum={state.flowTypeSum}
-                                                       selectedId={state.selectedFlowTypeId} updateFlowType={updateFlowType}/>)}*/}
+                                                       selectedId={state.selectedFlowTypeId} updateFlowType={updateFlowType}/>)}
 
-                {FlowTypes.flowTypes.map(el => <FlowTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
+                {/*{FlowTypes.flowTypes.map(el => <FlowTypeItem id={el.id} img={el.img} name={el.name} description={el.description}
                                                      price={el.price} flowTypeSum={state.flowTypeSum}
-                                                     selectedId={state.selectedFlowTypeId} updateFlowType={updateFlowType}/>)}
+                                                     selectedId={state.selectedFlowTypeId} updateFlowType={updateFlowType}/>)}*/}
             </div>
 
         </div>

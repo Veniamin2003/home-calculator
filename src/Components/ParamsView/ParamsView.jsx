@@ -2,7 +2,6 @@ import React from 'react'
 import s from './ParamsView.module.css'
 import ParamsMain from "./ParamsViewMain/ParamsMain";
 import ParamsChild from "./ParamsViewChild/ParamsChild";
-import HomeTypes from "../../HomeData/home-types.json"
 
 function ParamsView(props) {
     let state = props.typesPage;
@@ -10,7 +9,7 @@ function ParamsView(props) {
         <div className={s.allBlock}>
             <div className={s.mainBlock}>
                 <h3>Тип вашего дома</h3>
-                {HomeTypes.homeTypes.map(el => {
+                {state.stairsTypes.map(el => {
                     if (el.id === state.selectedStairsTypesId) {
                         return (<ParamsMain id={el.id} img={el.viewImg} descImg={el.img}/>)
                     }
